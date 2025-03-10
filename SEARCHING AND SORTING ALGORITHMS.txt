@@ -1,0 +1,241 @@
+SEARCHING ALGORITHMS
+Searching algorithms are essential tools in computer science used to locate specific items within a collection of data. These algorithms are designed to efficiently navigate through data structures to find the desired information, making them fundamental in various applications such as databases, web search engines, and more.
+Basics
+1. Linear Search
+o Definition: A simple searching algorithm that checks each element in the list sequentially until the target element is found or the entire list is searched.
+o Time Complexity: O(n) where n is the number of elements.
+2. Binary Search
+o Definition: A more efficient search algorithm that works on sorted arrays. It repeatedly divides the search interval in half. If the target value is less than the middle element, the search continues on the left half; otherwise, it continues on the right half.
+o Time Complexity: O(log n), much more efficient than linear search for large arrays.
+3. Two Pointers Technique
+o Definition: A technique where two pointers or indices are used to track elements in the array. It's commonly used in problems that involve pairs or intervals, like finding pairs that sum to a specific value.
+o Time Complexity: Typically O(n) when both pointers move in a linear pass.
+
+Library Implementations of Binary Search
+1. binary_search, lower_bound, and upper_bound in C++
+o binary_search: Checks if a value exists in a sorted range.
+o lower_bound: Returns the first position where a value could be inserted without violating the order.
+o upper_bound: Returns the position of the first element that is greater than a given value.
+2. Arrays.binarySearch() in Java
+o Finds the index of a specified element in a sorted array or returns a negative value if the element is not found.
+o Arrays.binarySearch() for Search in Subarray: You can specify a range to search within a subarray, using the binarySearch method.
+3. Collections.binarySearch() in Java
+o Similar to Arrays.binarySearch(), but for lists instead of arrays. The list must be sorted.
+4. Bisect in Python
+o Provides support for maintaining a sorted list. bisect_left finds the insertion point to keep the list sorted, while bisect_right does the same but on the right side of equal elements.
+5. List.BinarySearch in C#
+o A method used for performing binary search on a list of sorted elements. Returns the index if found; otherwise, a negative value is returned indicating the insertion point.
+
+Easy Problems
+1. Largest in an Array: Find the maximum value in an array.
+2. Second Largest in an Array: Find the second highest value.
+3. Largest Three in an Array: Find the top 3 largest values in an array.
+4. Missing Number: Given an array of n-1 numbers in a range 1 to n, find the missing number.
+5. First Repeating: Find the first element that repeats in an array.
+6. Missing and Repeating: Given an array with duplicate elements, find both the missing and repeating numbers.
+7. Count 1’s in a Sorted Binary Array: Count the number of 1s in a binary array where the array is sorted.
+8. Closest to 0 Sum Pair: Find a pair of numbers whose sum is closest to 0.
+9. Pair with the Given Difference: Given a sorted array, find if there are two elements with a given difference.
+10. K Largest or Smallest Elements: Find the k largest or smallest elements from an array.
+11. Kth Smallest in Row and Column-Wise Sorted Matrix: Find the k-th smallest element in a sorted matrix.
+12. Common Elements in 3 Sorted Arrays: Find the common elements in three sorted arrays.
+13. Ceiling in a Sorted Array: Find the smallest element in a sorted array that is greater than or equal to a given number.
+14. Floor in a Sorted Array: Find the largest element in a sorted array that is less than or equal to a given number.
+15. Maximum in a Bitonic Array: In an array that increases and then decreases, find the maximum element.
+16. Elements that Appear More Than n/k Times: Find all elements in an array that appear more than n/k times.
+
+Medium Problems
+1. Triplets with Zero Sum: Find if there are three numbers in an array that sum to zero.
+2. Partition Point: Find the point where an array can be divided into two parts that meet some condition.
+3. Largest Pair Sum: Find the largest sum of a pair of elements in an array.
+4. Kth Smallest in Unsorted Array: Find the kth smallest element in an unsorted array (could be solved with quickselect).
+5. Search in a Sorted and Rotated Array: Search for an element in an array that was sorted but then rotated.
+6. Min in a Sorted and Rotated Array: Find the minimum element in a rotated sorted array.
+7. Max in a Sorted and Rotated Array: Find the maximum element in a rotated sorted array.
+8. Peak Element: An element that is greater than or equal to its neighbors.
+9. Max and Min Using Minimum Comparisons: Find both max and min elements with the least number of comparisons.
+10. Find a Fixed Point in an Array: A fixed point is where the index is equal to the element.
+11. K Most Frequent Words from a File: Count and find the k most frequent words from a file.
+12. K Closest Elements: Find the k closest elements to a given number.
+13. 2 Sum - Pair Sum Closest to Target: Find two numbers in a sorted array that sum closest to a target value.
+14. Closest Pair from Two Sorted Arrays: Find the pair of elements from two sorted arrays whose sum is closest to a target.
+15. Three Closest from Three Sorted Arrays: Find the closest triplet from three sorted arrays.
+16. Binary Search for Rationals: Find rational numbers using binary search.
+17. Missing Element in AP (Arithmetic Progression): Find the missing element in an arithmetic progression.
+
+Hard Problems
+1. Median of Two Sorted Arrays: Find the median of two sorted arrays.
+2. Median of Two Sorted Arrays of Different Sizes: Similar to the above, but one array may be larger than the other.
+3. Search in an Almost Sorted Array: Find an element in an array where each element is at most k positions away from its sorted position.
+4. Search in a Sorted Infinite Array: Search for an element in an infinite sorted array.
+5. Pair Sum in a Sorted and Rotated Array: Find a pair whose sum equals a given value in a rotated sorted array.
+6. Kth Smallest/Largest Element in Unsorted Array: Find the kth smallest or largest element in an unsorted array.
+7. Kth Largest Element in a Stream: Use a heap or priority queue to find the kth largest element in a stream of numbers.
+8. Best First Search (Informed Search): A search algorithm that uses heuristics to find the best path first.
+
+More Searching Algorithms
+1. Sentinel Linear Search: A linear search with an added sentinel (a value that is guaranteed to be found), which eliminates the need for checking boundaries in each iteration.
+2. Meta Binary Search | One-Sided Binary Search: A variation of binary search where one side is eliminated entirely at each step.
+3. Ternary Search: A divide-and-conquer algorithm similar to binary search but splits the search space into three parts instead of two.
+4. Jump Search: Jumping ahead by fixed steps and then performing a linear search within a block when the target is found.
+5. Interpolation Search: Similar to binary search, but instead of halving the range, it estimates where the value might be based on the value itself.
+6. Exponential Search: A search algorithm that starts by finding a range where the element might be located by doubling the index and then performing a binary search.
+7. Fibonacci Search: A search algorithm that uses Fibonacci numbers to divide the search space, providing better performance than binary search for some scenarios.
+8. The Ubiquitous Binary Search: This refers to various ways binary search can be applied to different kinds of problems (e.g., searching in a range of numbers, finding the minimum or maximum, etc.).
+
+Comparisons Between Different Searching Algorithms
+1. Linear Search vs Binary Search: Linear search is simple but slow for large datasets (O(n)), while binary search is much faster (O(log n)) but requires sorted data.
+2. Interpolation Search vs Binary Search: Interpolation search is faster than binary search for uniformly distributed data because it estimates the position of the target, but binary search is more general and works on any sorted data.
+3. Why is Binary Search Preferred Over Ternary Search?: Binary search typically requires fewer comparisons (O(log n)) compared to ternary search (O(log3 n)), making it more efficient.
+4. Is Sentinel Linear Search Better Than Normal Linear Search?: Sentinel linear search is slightly more efficient because it avoids boundary checks during each iteration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SORTING ALGORITHMS
+
+
+A Sorting Algorithm is used to rearrange a given array or list of elements in an order. Sorting is provided in library implementation of most of the programming languages.
+Basics of Sorting Algorithms
+Introduction to Sorting
+Sorting is the process of arranging elements in a list or array in a particular order (ascending or descending). Sorting is a fundamental task in computer science with many applications such as searching, data compression, and organizing data for efficient processing.
+Applications of Sorting
+* Searching: Sorted data allows more efficient searching algorithms like binary search.
+* Data presentation: Sorted data is easier to interpret and analyze.
+* Data comparison: Sorted data helps in comparing elements efficiently.
+* Efficient Algorithms: Many algorithms (e.g., merging, minimum spanning tree) work efficiently on sorted data.
+
+Sorting Algorithms
+Comparison-Based Sorting Algorithms:
+Comparison-based algorithms compare elements to determine their order.
+1. Selection Sort: Repeatedly selects the minimum element from the unsorted portion and swaps it with the first unsorted element. 
+o Time complexity: O(n²)
+2. Bubble Sort: Repeatedly compares adjacent elements and swaps them if they are in the wrong order. 
+o Time complexity: O(n²)
+3. Insertion Sort: Builds the sorted array one element at a time, by inserting the next element in its correct position. 
+o Time complexity: O(n²)
+4. Merge Sort: A divide-and-conquer algorithm that splits the array into halves, recursively sorts each half, and merges them. 
+o Time complexity: O(n log n)
+5. Quick Sort: A divide-and-conquer algorithm that partitions the array around a pivot element, then recursively sorts the subarrays. 
+o Time complexity: O(n log n) average, O(n²) worst case
+6. Heap Sort: Builds a max heap and repeatedly removes the largest element from the heap. 
+o Time complexity: O(n log n)
+7. Cycle Sort: In-place, non-comparing sorting algorithm that works by rotating elements into their correct position. 
+o Time complexity: O(n²)
+8. 3-way Merge Sort: A modification of merge sort where each array is split into three parts instead of two, then sorted and merged. 
+o Time complexity: O(n log n)
+Non-Comparison-Based Sorting Algorithms:
+Non-comparison algorithms use different strategies (like counting occurrences, digit processing, or bucketing) to sort the data.
+1. Counting Sort: Sorts elements based on their frequency, assuming a small range of input values. 
+o Time complexity: O(n+k) where k is the range of input values
+2. Radix Sort: Sorts numbers digit by digit from the least significant digit (LSD) to the most significant digit (MSD). 
+o Time complexity: O(nk) where k is the number of digits
+3. Bucket Sort: Divides the elements into several buckets, sorts each bucket individually (often using another sorting algorithm), and then concatenates the results. 
+o Time complexity: O(n+k)
+4. TimSort: A hybrid algorithm combining merge sort and insertion sort, optimized for real-world data. 
+o Time complexity: O(n log n) (best case O(n))
+5. Comb Sort: An improvement over bubble sort that eliminates small gaps by using a larger gap initially and progressively reduces the gap. 
+o Time complexity: O(n²) in the worst case, better than bubble sort in practice.
+6. Pigeonhole Sort: Sorts elements by placing them into "pigeonholes" based on their values. 
+o Time complexity: O(n + range)
+Hybrid Sorting Algorithms:
+Hybrid algorithms combine multiple strategies for more efficient sorting in different scenarios.
+1. IntroSort: A hybrid sorting algorithm that starts with quicksort and switches to heapsort when the recursion depth exceeds a certain limit. 
+o Time complexity: O(n log n)
+2. TimSort: Combines merge sort and insertion sort to take advantage of both algorithms' strengths. 
+o Time complexity: O(n log n) (best case O(n))
+
+Library Implementations
+1. qsort() in C: A library function in C for quick sorting, uses a comparison function to define the sorting criteria.
+o Example: 
+c
+Copy
+qsort(arr, n, sizeof(int), compare);
+2. sort() in C++ STL: A standard template library (STL) function that uses introspective sort (IntroSort).
+o Example: 
+cpp
+Copy
+std::sort(arr, arr + n);
+3. Arrays.sort() in Java: Uses a dual-pivot quicksort algorithm for primitive types and a modified merge sort for objects.
+o Example: 
+java
+Copy
+Arrays.sort(arr);
+4. Collections.sort() in Java: Sorts a list using a modified merge sort or Timsort.
+o Example: 
+java
+Copy
+Collections.sort(list);
+5. Sort a List in Python: Python uses Timsort for the sort() function.
+o Example: 
+python
+Copy
+lst.sort()
+6. Sorting in JavaScript: JavaScript's sort() method sorts an array in place using a comparison function.
+o Example: 
+javascript
+Copy
+arr.sort((a, b) => a - b);
+
+Easy Problems on Sorting
+These problems focus on basic sorting-related tasks.
+1. Check if an array is sorted: Verify if the array is in ascending or descending order.
+2. Sort an array of two types: Sort an array that contains only two distinct types of elements (e.g., 0s and 1s).
+3. Sort a String: Sort characters of a string in ascending or descending order.
+4. Sort Each Row of a Matrix: Sort each row of a given matrix.
+5. Sort a Matrix: Sort the entire matrix based on one or more columns.
+6. Sort a Linked List: Sort a singly linked list.
+7. Sort in Wave Form: Sort an array such that elements are in a wave-like pattern.
+8. Sort by Frequency: Sort an array based on the frequency of elements, from most frequent to least frequent.
+9. Sort from Different Machines: Merge and sort data coming from multiple sources or machines.
+10. Check if any two intervals overlap: Determine if there is any overlap between given time intervals.
+
+Medium Problems on Sorting
+These problems involve more complex sorting tasks, such as working with subarrays or handling specific types of data.
+1. Minimum Increments to Make Unique: Minimize the number of increments needed to make an array of numbers unique.
+2. Merge Overlapping Intervals: Merge intervals that overlap.
+3. Minimum Platforms: Determine the minimum number of platforms required for a railway station to accommodate trains arriving at different times.
+4. Closest Pair of Elements: Find the closest pair of elements in an array.
+5. Chocolate Distribution Problem: Distribute chocolate bars to children such that the difference between the maximum and minimum chocolates each child gets is minimized.
+6. Min and Max Amount to Buy All: Find the minimum and maximum amount needed to buy all items from a list of prices.
+7. 3 Sum - Find Any: Find any triplet in an array that sums to a target value.
+8. 3 Sum - Closest Triplet: Find the triplet closest to a given sum.
+
+Hard Problems on Sorting
+These problems often require advanced techniques and can involve more intricate sorting tasks.
+1. Merge Without Extra Space: Merge two sorted arrays without using extra space.
+2. Top K Frequent Elements: Find the top K most frequent elements in an array.
+3. 3 Sum - Distinct Triplets: Find distinct triplets that sum to a target value.
+4. Surpasser Counts in an Array: Count the number of elements that are greater than or equal to each element in an array.
+5. Minimum Swaps for Binary Tree to BST: Find the minimum number of swaps needed to convert a binary tree into a binary search tree.
+
+
+
